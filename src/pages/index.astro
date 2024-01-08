@@ -1,18 +1,41 @@
 ---
+const pageTitle = "Inicio"
+const identity = {
+	firstName: "Juan",
+	country: "Ecuador",
+	occupation: "Musician",
+	hobbies: ["programacion", "magia", "comer"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro"];
+
 
 ---
 
 <html lang="es">
 	<head>
-		<meta charset="utf-8" />
+<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
+	<a href="/about">Sobre mi</a>
 		<h1>Astro</h1>
 		<h1>Mi sitio Astro</h1>
 		<h2>Esto se va a descontrolar</h2>
+
+		<p> Aquí algunos datos sobre mi:</p>
+<ul>
+	<li>Me lamo {identity.firstName}.</li>
+	<li>Vivo en {identity.country} y trabajo como {identity.occupation}.</li>
+	<li>Dos de mis aficiones son: {identity.hobbies[0]} y {identity.hobbies[1]}</li>
+</ul>
+<p>Mis habilidades son:</p>
+<ul>
+	{skills.map((skill) => <li>{skill}</li> )}
+</ul>
+
 	</body>
 </html>
