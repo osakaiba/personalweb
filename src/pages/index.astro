@@ -8,7 +8,8 @@ const identity = {
 };
 
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro"];
-
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro'
 
 ---
 
@@ -21,7 +22,7 @@ const skills = ["HTML", "CSS", "JavaScript", "React", "Astro"];
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-	<a href="/about">Sobre mi</a>
+	<Navigation/>
 		<h1>Astro</h1>
 		<h1>Mi sitio Astro</h1>
 		<h2>Esto se va a descontrolar</h2>
@@ -36,6 +37,6 @@ const skills = ["HTML", "CSS", "JavaScript", "React", "Astro"];
 <ul>
 	{skills.map((skill) => <li>{skill}</li> )}
 </ul>
-
+<Footer/>
 	</body>
 </html>

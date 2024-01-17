@@ -1,5 +1,7 @@
 ---
 const pageTitle = "Sobre mi";
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
 ---
 
 <html lang="es">
@@ -11,9 +13,7 @@ const pageTitle = "Sobre mi";
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-
-	<a href="/">Inicio</a>
-	<a href="/blog">Blog</a>
+		<Header/>
 		<h1>Mi sitio en Astro</h1>
 		<h1>algo sobre mi...</h1>
 		<h2>Esto se va a descontrolar</h2>
@@ -21,5 +21,6 @@ const pageTitle = "Sobre mi";
 		<p>
 
 		</p>
+		<Footer/>
 	</body>
 </html>
