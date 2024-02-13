@@ -26,17 +26,6 @@ import Footer from '../components/Footer.astro'
 		<h1>Astro</h1>
 		<h1>Mi sitio Astro</h1>
 		<h2>Esto se va a descontrolar</h2>
-
-		<p> Aquí algunos datos sobre mi:</p>
-<ul>
-	<li>Me lamo {identity.firstName}.</li>
-	<li>Vivo en {identity.country} y trabajo como {identity.occupation}.</li>
-	<li>Dos de mis aficiones son: {identity.hobbies[0]} y {identity.hobbies[1]}</li>
-</ul>
-<p>Mis habilidades son:</p>
-<ul>
-	{skills.map((skill) => <li>{skill}</li> )}
-</ul>
 <Footer/>
 	</body>
 </html>

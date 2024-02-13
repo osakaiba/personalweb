@@ -2,6 +2,24 @@
 const pageTitle = "Sobre mi";
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
+import '../styles/global.css';
+const identify = {
+
+	firstName: "Juan",
+	country: "Ecuador",
+	occupation: "Musician",
+	hobbies: ["Basketball", "computers", "archery"],
+
+};
+const skills = [ "HTML","CSS", "JavaScript","React", "Astro"];
+const happy = true;
+const finished= false;
+const goal = 3;
+
+const operatingSystem= "Linux";
+const quantity = 3;
+const footwear = "botas";
+const student = true;
 ---
 
 <html lang="es">
@@ -11,16 +29,38 @@ import Footer from '../components/Footer.astro'
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
+		<style>
+			h1{
+				color:purple;
+				font-size: 4rem;
+			}
+
+		</style>
 	</head>
 	<body>
 		<Header/>
 		<h1>Mi sitio en Astro</h1>
 		<h1>algo sobre mi...</h1>
-		<h2>Esto se va a descontrolar</h2>
-			cada vez que se haga uncambio lo veremos en vivo
-		<p>
+		<h1>{pageTitle}</h1>
 
-		</p>
+		<p>Estoy trabajando en el tutorial introductorio de Astro. Me llamo {identify.firstName}. Vivo en {identify.country}</p>	
+<p>Mis habilidades son:</p>
+<ul>
+	{skills.map((skill)=> <li>{skill}</li>)}
+
+</ul>
+
+{happy && <p>!Etoy feliz de aprender Astro! </p>}
+
+{finished && <p>!He terminado este tutorial </p>}
+{goal == 3 ? <p> Mi objetivo es terminarlo ya en 3 días. </p> : <p>Mi objetivo no son 2 días </p>}
+<p>Mi sistema operativo es {operatingSystem}</p>
+{student && <p>Sigo estudiando, aún me falta aprender de  {skills.map((skill)=> <spam>{skill+" "}</spam>)} </p>}
+
+
+
+
+
 		<Footer/>
 	</body>
 </html>
