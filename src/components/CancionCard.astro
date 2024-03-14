@@ -1,0 +1,24 @@
+--- 
+const {nombre, audio,partitura} = Astro.props
+---
+
+<div class="card">
+<h3> Canción :{nombre}</h3>
+link al audio: <div class="button">{audio}</div>
+link a la partitura: <div class="button">{partitura}</div>
+
+</div>
+
+<style>
+  .card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 16px;
+  }
+
+  .button {
+    margin-right: 8px;
+    border: 1px solid #020
+  }
+</style>
+

@@ -9,9 +9,10 @@ const identity = {
 
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro"];
 import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
-import Saludo from '../components/Saludo.astro';
+import Footer from '../components/Footer.astro'
 
+import CancionCard from '../components/CancionCard.astro';
+import HelloComponent from '../components/HelloComponent.jsx'
 ---
 
 <html lang="es">
@@ -26,8 +27,13 @@ import Saludo from '../components/Saludo.astro';
 	<Navigation/>
 		<h1>Astro</h1>
 		<h1>Mi sitio Astro</h1>
-		<Saludo/>
 		<h2>Esto se va a descontrolar</h2>
+		<CancionCard nombre="test" audio= "aqui suena" partitura= "link de partitura"/>
+		<HelloComponent client:load/>
+		
+		
+
+
 <Footer/>
 	</body>
 </html>
